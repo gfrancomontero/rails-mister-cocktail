@@ -1,0 +1,31 @@
+<h1>Cocktails#show</h1>
+<p>Find me in app/views/cocktails/show.html.erb</p>
+
+<h4>Cocktail Name:</h4>
+<%= @cocktail.name %>
+<br>
+<br>
+
+<h4>Doses + Ingredients:</h4>
+<% @cocktail.doses.each do |dose| %>
+<h6><%= dose[:description].capitalize%> <span style="border:3px solid red">of</span> <%=Ingredient.find(dose[:ingredient_id]).name.capitalize %></h6>
+<% end %>
+
+<!-- <br>
+<br>
+
+<h4>Cocktail Ingredients:</h4>
+<% @cocktail.ingredients.each do |ingredient| %>
+<h6>  <%= ingredient[:name].capitalize  %> </h6>
+<% end %>
+
+<br> -->
+<br>
+
+<%= link_to "back to cocktail menu", cocktails_path %>
+<br>
+<%= link_to "add Doses + Ingredients", new_cocktail_dose_path(@cocktail) %>
+
+
+
+

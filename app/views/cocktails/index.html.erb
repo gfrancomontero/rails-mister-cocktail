@@ -1,0 +1,11 @@
+<h1>Cocktail menu</h1>
+<h6>path app/views/cocktails/index.html.erb</h6>
+<ol>
+  <% @cocktails.each do |cocktail| %>
+      <li class="cocktail-card"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
+  <% end %>
+</ol>
+
+
+
+  <%= link_to "add new cocktail +", new_cocktail_path %>
