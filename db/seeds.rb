@@ -10,23 +10,23 @@ Ingredient.destroy_all
 Cocktail.destroy_all
 Dose.destroy_all
 
-INGREDIENTS = ["Mint", "Lemon", "Sugar", "Orange Juice"]
+# INGREDIENTS = ["Mint", "Lemon", "Sugar", "Orange Juice"]
 
-INGREDIENTS.each do |ingredient|
-  Ingredient.create(name: ingredient)
-end
+# INGREDIENTS.each do |ingredient|
+#   Ingredient.create(name: ingredient)
+# end
 
-COCKTAILS = ["Mint Julep", "Thij's Special", "Martini", "Gin and Tonic"]
+# COCKTAILS = ["Mint Julep", "Franco's Special", "Martini", "Gin and Tonic"]
 
-COCKTAILS.each do |cocktail|
-  Cocktail.create(name: cocktail)
-end
+# COCKTAILS.each do |cocktail|
+#   Cocktail.create(name: cocktail)
+# end
 
-DOSES = ["1 cl", "2 tbsp", "3 cl", "1 cup"]
+# DOSES = ["1 cl", "2 tbsp", "3 cl", "1 cup"]
 
-DOSES.each do |dose|
-  new_dose = Dose.new(description: dose)
-  new_dose.ingredient = Ingredient.all.sample
-  new_dose.cocktail = Cocktail.all.sample
-  new_dose.save
-end
+# DOSES.each do |dose|
+#   new_dose = Dose.new(description: dose)
+#   new_dose.ingredient = Ingredient.all.sample
+#   new_dose.cocktail = Cocktail.all.sample
+#   new_dose.save
+# end

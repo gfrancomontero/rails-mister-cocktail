@@ -1,3 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/cocktails">MisterMixer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Actions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/cocktails/new">Add a cocktail</a>
+          <a class="dropdown-item" href="#">Delete a cocktail</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/cocktails">Back to all Cocktails</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <h1>Cocktails#show</h1>
 <p>Find me in app/views/cocktails/show.html.erb</p>
 
@@ -11,16 +34,12 @@
 <h6><%= dose[:description].capitalize%> <span style="border:3px solid red">of</span> <%=Ingredient.find(dose[:ingredient_id]).name.capitalize %></h6>
 <% end %>
 
-<!-- <br>
 <br>
 
-<h4>Cocktail Ingredients:</h4>
-<% @cocktail.ingredients.each do |ingredient| %>
-<h6>  <%= ingredient[:name].capitalize  %> </h6>
-<% end %>
+<%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, crop: :fill %>
 
-<br> -->
-<br>
+
+
 
 <%= link_to "back to cocktail menu", cocktails_path %>
 <br>

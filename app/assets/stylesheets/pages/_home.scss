@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+body {
+  background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c), url(https://res.cloudinary.com/gfranco/image/upload/v1598004004/jr1mbq7q8mqnfuas2zj4.jpg);
+}
+
+.index-text {
+  color: grey;
+}
+
+.subtitle-text {
+  color: grey;
+}
+
+.title-holder {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c), url(https://res.cloudinary.com/gfranco/image/upload/v1598004004/jr1mbq7q8mqnfuas2zj4.jpg);
+}

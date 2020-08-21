@@ -1,11 +1,38 @@
-<h1>Cocktail menu</h1>
-<h6>path app/views/cocktails/index.html.erb</h6>
-<ol>
-  <% @cocktails.each do |cocktail| %>
-      <li class="cocktail-card"><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ol>
-
-
-
-  <%= link_to "add new cocktail +", new_cocktail_path %>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/cocktails">MisterMixer</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cocktail List
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <% @cocktails.each do |cocktail| %>
+                <a class="dropdown-item" href="#">
+                    <%= cocktail[:name] %></a>
+                <% end %>
+                <a class="dropdown-item" href="/cocktails/new">Add a cocktail</a>
+                <a class="dropdown-item" href="#">Delete a cocktail</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div>
+    <div class="title-holder">
+        <div class="index-text">
+            <h1> Welcome to Mister Mixer</h1>
+        </div>
+        <div class="subtitle-text">
+            <h5>A place to store your cocktail recipes</h5>
+        </div>
+        <div class="subtitle-text">
+            <h6>🍸Still under construction🍸</h6>
+        </div>
+    </div>
+    <!--   <ol>
+        <% @cocktails.each do |cocktail| %>
+        <li class="cocktail-card">
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </li>
+        <% end %>
+    </ol> -->
+</div>
